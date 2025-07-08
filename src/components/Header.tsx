@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "@/components/ThemeToggle";
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,33 +28,38 @@ export const Header = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("hero")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Home
-            </button>
-            <button
               onClick={() => scrollToSection("services")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Services
+              What We Do
             </button>
             <button
               onClick={() => scrollToSection("about")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              About
+              What We Think
+            </button>
+            <button
+              onClick={() => scrollToSection("about")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              About FIXUS
             </button>
             <button
               onClick={() => scrollToSection("contact")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Contact
+              Careers
+            </button>
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Contact Us
             </button>
           </nav>
 
           <div className="hidden md:flex items-center space-x-4">
-            <ThemeToggle />
             <Button
               onClick={() => scrollToSection("contact")}
               className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors"
@@ -65,8 +69,7 @@ export const Header = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-2">
-            <ThemeToggle />
+          <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="p-2"
@@ -81,28 +84,34 @@ export const Header = () => {
           <nav className="md:hidden mt-4 pb-4 border-t pt-4">
             <div className="flex flex-col space-y-4">
               <button
-                onClick={() => scrollToSection("hero")}
-                className="text-foreground hover:text-primary transition-colors text-left"
-              >
-                Home
-              </button>
-              <button
                 onClick={() => scrollToSection("services")}
                 className="text-foreground hover:text-primary transition-colors text-left"
               >
-                Services
+                What We Do
               </button>
               <button
                 onClick={() => scrollToSection("about")}
                 className="text-foreground hover:text-primary transition-colors text-left"
               >
-                About
+                What We Think
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className="text-foreground hover:text-primary transition-colors text-left"
+              >
+                About FIXUS
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
                 className="text-foreground hover:text-primary transition-colors text-left"
               >
-                Contact
+                Careers
+              </button>
+              <button
+                onClick={() => scrollToSection("contact")}
+                className="text-foreground hover:text-primary transition-colors text-left"
+              >
+                Contact Us
               </button>
               <Button
                 onClick={() => scrollToSection("contact")}

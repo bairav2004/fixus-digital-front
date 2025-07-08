@@ -30,6 +30,13 @@ export const Hero = () => {
               <p className="text-xl text-gray-600 leading-relaxed">
                 FIXUS delivers cutting-edge technology solutions that drive growth, efficiency, and innovation. From AI-powered applications to IoT ecosystems, we turn your vision into reality.
               </p>
+              
+              {/* Quote Section */}
+              <div className="bg-white/80 backdrop-blur-sm rounded-lg p-6 border-l-4 border-blue-600 shadow-sm">
+                <blockquote className="text-lg italic text-gray-700 font-medium">
+                  "The way to get started is to quit talking and begin doing."
+                </blockquote>
+              </div>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
